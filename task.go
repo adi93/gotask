@@ -22,13 +22,19 @@ const (
 	High
 )
 
+type Story struct {
+	Id                int    `json:"id"`
+	Name, Description string `json:"name"`
+	Tasks             []Task `json:"tasks"`
+}
+
 type Task struct {
-	Id                int
-	Name, Description string
-	Status            Status
-	Created           time.Time
-	Priority          Priority
-	LinkedTasks       []Task
+	Id                int       `json:"id"`
+	Name, Description string    `json:"name"`
+	Status            Status    `json:"status"`
+	Created           time.Time `json:"created"`
+	Priority          Priority  `json:"priority"`
+	LinkedTasks       []Task    `json:"linked_tasks"`
 }
 
 func (task *Task) String() string {

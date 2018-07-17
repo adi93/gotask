@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestCompleteTas(t *testing.T) {
+func TestCompleteTask(t *testing.T) {
 	task := &Task{Name: "First task", Description: "A task made for example", Priority: Medium}
 	task.CompleteTask()
 	if task.Status != Done {
